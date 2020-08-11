@@ -1,0 +1,46 @@
+{
+  "name": "type-type-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./server/server.ts",
+  "scripts": {
+    "prebuild": "eslint --ignore-path .gitignore",
+    "build": "tsc",
+    "start": "node ./dist/server/app.js",
+    "start-dev": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paulinajewulska/Type-type-server.git"
+  },
+  "author": "Paulina Jewulska",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/paulinajewulska/Type-type-server/issues"
+  },
+  "homepage": "https://github.com/paulinajewulska/Type-type-server#readme",
+  "dependencies": {
+    "@types/mongoose": "^5.7.34",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^3.6.0",
+    "mongoose": "^5.9.28",
+    "ts-mongoose": "0.0.21",
+    "typescript": "^3.9.7"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.7",
+    "@types/node": "^14.0.27",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-strongloop": "^2.1.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "nodemon": "^2.0.4",
+    "prettier": "^2.0.5",
+    "ts-node": "^8.10.2"
+  }
+}
