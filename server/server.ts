@@ -3,10 +3,11 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 import 'ts-mongoose/plugin';
-import { Request, Response } from 'express';
 
 const connectionString = process.env.MONGODB_URI;
 const port = process.env.PORT || 3000;
+
+const authRoutes = require('./routes/auth.routes');
 
 const app = express();
 
@@ -16,10 +17,7 @@ app.use(express.static('public'));
 app.use(cors());
 mongoose.set('useCreateIndex', true);
 
-app.get("/", (req: Request, res: Response) => {
-    res.json({ message: "Hello ;)" });
-});
-
+app.use(authRoutes);
 
 mongoose
     .connect(connectionString, { useUnifiedTopology: true, useNewUrlParser: true })
